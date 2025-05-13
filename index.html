@@ -1,0 +1,60 @@
+!DOCTYPE html
+html lang=pt-BR
+head
+  meta charset=UTF-8
+  meta name=viewport content=width=device-width, initial-scale=1.0
+  titleCarroFodasititle
+  style
+    body {
+      margin 0;
+      background-color #111;
+      color #fff;
+      font-family Arial, sans-serif;
+      text-align center;
+    }
+    header {
+      padding 20px;
+      background-color #222;
+      font-size 2rem;
+    }
+    .slideshow-container {
+      max-width 800px;
+      position relative;
+      margin 30px auto;
+    }
+    .slide {
+      display none;
+      width 100%;
+    }
+    img {
+      width 100%;
+      border-radius 10px;
+    }
+  style
+head
+body
+  headerCarroFodasiheader
+  div class=slideshow-container
+    img class=slide src=httpscdn.pixabay.comphoto202203181657toyota-supra-7077723_1280.jpg alt=Supra 1
+    img class=slide src=httpscdn.pixabay.comphoto202111100856car-6781674_1280.jpg alt=Supra 2
+    img class=slide src=httpscdn.pixabay.comphoto202203051414toyota-7049252_1280.jpg alt=Supra 3
+  div
+
+  script
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName(slide);
+
+    function showSlides() {
+      for (let i = 0; i  slides.length; i++) {
+        slides[i].style.display = none;
+      }
+      slideIndex++;
+      if (slideIndex  slides.length) { slideIndex = 1; }
+      slides[slideIndex - 1].style.display = block;
+      setTimeout(showSlides, 3000);  Muda a cada 3 segundos
+    }
+
+    showSlides();
+  script
+body
+html
